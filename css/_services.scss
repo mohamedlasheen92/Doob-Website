@@ -1,0 +1,46 @@
+.services {
+  padding: 10rem 0;
+  position: relative;
+  .left-shape, .right-shape {
+    position: absolute;
+    max-width: 25rem;
+    z-index: -1;
+  }
+  .left-shape {
+    left: 0;
+    top: 0;
+  }
+  .right-shape {
+    right: 0;
+    bottom: -40rem;
+  }
+  .content h2 {
+    @include title(4rem);
+    line-height: 1.5;
+  }
+  .feature {
+    padding: 2rem;
+    box-shadow: 0 7px 10px  $light;
+    min-height: 350px;
+    background-color: $white;
+    img {
+      width: 7rem;
+    }
+    h3 {
+      margin: 3rem 0;
+      @include title(2.5rem);
+    }
+    p {
+      @include graph(1.7rem);
+    }
+    &:hover {
+      transition: $myTrans;
+      background-color: $secondary;
+      transform: translateY(-1rem);
+      h3, p {
+        color: $white;
+      }
+    }
+
+  }
+}

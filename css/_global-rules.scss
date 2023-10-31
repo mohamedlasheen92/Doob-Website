@@ -1,0 +1,150 @@
+$main: #ff3946;
+$secondary: #314584;
+$white: #fff;
+$light: #777;
+$backShapeColor: #F4FAFE;
+$myTrans: all 0.3s linear;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $main;
+  }
+}
+::selection {
+  background-color: $main;
+  color: $white;
+}
+body {
+  height: 4000px;
+  font-family: "Mohave", sans-serif;
+  scroll-padding-top: 53px;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 575.98px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.parent {
+  @include grid(30rem);
+}
+.theBtn {
+  @include title(2rem);
+  background-color: $main;
+  border: none;
+  padding: 0.5rem 1.7rem;
+  color: $white;
+  transition: $myTrans;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: $myTrans;
+  }
+  &::before {
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    background-color: $white;
+    z-index: 2;
+  }
+  &::after {
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(239, 49, 61, 0.3);
+    z-index: 1;
+  }
+  &:hover {
+    &::before, &::after {
+      width: 100%;
+    }
+  }
+}
+.secBtn {
+  background-color: $white;
+  color: $main;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 15px 1px #bababa;
+  display: flex;
+  align-items: center;
+  transition: $myTrans;
+  svg {
+    margin-left: 1rem;
+  }
+  &:hover {
+    background-color: $secondary;
+    color: $white;
+  }
+
+}
+.theTitle {
+  span {
+    color: $main;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  .section-title {
+    @include title(4.5rem);
+  }
+}
+
+.separate {
+  margin-top: 50rem;
+}
+
+.my-animate {
+  animation: move 2s linear infinite alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
+}

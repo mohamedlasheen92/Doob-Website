@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- <link rel="icon" href="images/logo.png"> -->
+
+  <title>Doob</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header" class="">
+    <div class="container py-5">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <nav class="d-flex align-items-center ">
+          <ul>
+            <li>
+              <a href="#intro">Home.</a>
+              <a href="#about">About us.</a>
+              <a href="#portfolio">Portfolio.</a>
+              <a href="#blog">Blog.</a>
+              <a href="#contact">Contact us.</a>
+            </li>
+          </ul>
+          <div class="settings d-flex align-items-center">
+            <ul class="me-5 lang">
+              <li>
+                <button class="langBtn d-flex justify-content-between">
+                  Language <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="sec-menu">
+                  <li><button>EN</button></li>
+                  <li><button>AR</button></li>
+                </ul>
+              </li>
+            </ul>
+            <button class="secBtn" data-bs-toggle="modal" data-bs-target="#contactM">
+              contact us
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </nav>
+
+        <div class="menu">
+          <i class="fa-solid fa-bars fa-4x"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactM" tabindex="-1" aria-labelledby="contactMLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">First Name</label>
+              </div>
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Last Name</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Email Address</label>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button class="secBtn my-5 text-center">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Intro -->
+  <section class="intro text-center text-md-start" id="intro">
+    <div class="container">
+      <div class="row align-items-center g-5 ">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <article class="content">
+            <h1>The Spirit of <br />Digital Agency.</h1>
+            <p>
+              Vestibulum ac diam sit amet quam vehicula elementum amet est on
+              dui. Nulla porttitor accumsan tincidunt.
+            </p>
+            <button class="theBtn">More About us</button>
+            <button class="touch">Get in Touch</button>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <img src="images/intro.png" alt="intro" class="d-none d-md-block w-100 my-animate" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="services">
+    <div>
+      <img src="images/about-left-shape.png" alt="about-left-shape" class="left-shape my-animate" />
+    </div>
+    <div>
+      <img src="images/about-right-shape.png" alt="about-right-shape" class="right-shape my-animate" />
+    </div>
+    <div class="container">
+      <div class="row align-items-start g-5 text-center text-md-start">
+        <div class="col-lg-4">
+          <div class="content">
+            <h2>Anything you <br />need,we’ve got you covered</h2>
+            <button class="theBtn mt-5" data-bs-toggle="modal" data-bs-target="#contactM">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="feature me-0 me-md-5">
+            <img src="images/icon1.png" alt="Mail Icon" />
+            <h3>Web & Graphic Design</h3>
+            <p>
+              Vestibulum ac diam sit amet quam vehicula elementum amet est on
+              dui. Nulla porttitor accumsan tincidunt.
+            </p>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="feature ms-0 ms-md-5">
+            <img src="images/icon2.png" alt="Website Icon" />
+            <h3>Web & App Development</h3>
+            <p>
+              Vestibulum ac diam sit amet quam vehicula elementum amet est on
+              dui. Nulla porttitor accumsan tincidunt.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="about text-center text-sm-start" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-5 mb-lg-0">
+          <div class="image mb-5 mb-lg-0">
+            <img src="images/desk.png" class="img-fluid my-animate" alt="desk lamp" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <article class="words">
+            <div class="content">
+              <div class="theTitle">
+                <span>our company</span>
+                <h3 class="section-title">Some Fine <br>Words About Us</h3>
+              </div>
+              <div class="swiper aboutSwiper">
+
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <p class="word">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cupiditate fugit neque. Aut, rem a,
+                      beatae
+                      ea quam. Laborum doloremque, placeat ratione sequi corporis debitis ut nisi possimus, perspiciatis
+                      quis
+                      exercitationem qui, ducimus recusandae! Facilis, hic voluptatem?
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="word">
+                      Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                      tincidunt.Vestibulum ac
+                      diam sit amet.
+                      Quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="word">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam cupiditate fugit neque. Aut, rem a,
+                      Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                      possimus, perspiciatis
+                      quis
+                      exercitationem qui, ducimus recusandae! Facilis, hic voluptatem?
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="control d-flex gap-5 justify-content-center justify-content-sm-start">
+                  <div class="button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+                  <div class="button-next"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="title d-flex mb-5 justify-content-between align-items-sm-end flex-column flex-sm-row">
+        <h2 class="text-center text-sm-start">see some of our <br>creative work</h2>
+        <div class="control d-flex gap-5 justify-content-center my-3 my-sm-0">
+          <div class="button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="button-next"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+
+      <div class="swiper portfolioSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+
+            <div class="row ">
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/1.png" alt="ImagePortfolio1"></figure>
+              </div>
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/2.png" alt="ImagePortfolio2"></figure>
+              </div>
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/3.png" alt="ImagePortfolio3"></figure>
+              </div>
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/4.png" alt="ImagePortfolio4"></figure>
+              </div>
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/5.png" alt="ImagePortfolio5"></figure>
+              </div>
+              <div class="item col-sm-6 col-md-4">
+                <figure><img src="images/6.png" alt="ImagePortfolio6"></figure>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+
+            <div class="row ">
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/1.png" alt="ImagePortfolio1"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/2.png" alt="ImagePortfolio2"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/3.png" alt="ImagePortfolio3"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/4.png" alt="ImagePortfolio4"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/5.png" alt="ImagePortfolio5"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/6.png" alt="ImagePortfolio6"></figure>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+
+            <div class="row ">
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/1.png" alt="ImagePortfolio1"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/2.png" alt="ImagePortfolio2"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/3.png" alt="ImagePortfolio3"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/4.png" alt="ImagePortfolio4"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/5.png" alt="ImagePortfolio5"></figure>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <figure><img src="images/6.png" alt="ImagePortfolio6"></figure>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="title d-flex justify-content-between align-items-sm-end mb-5 flex-column flex-sm-row">
+        <div class="theTitle text-center text-sm-start">
+          <span>blog stories</span>
+          <h2 class="section-title">check our news</h2>
+        </div>
+        <div class="control d-flex gap-5 justify-content-center my-3 my-sm-0">
+          <div class="button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="button-next"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+
+      <div class="swiper blogSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+
+            <article class="row">
+
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+
+          </div>
+          <div class="swiper-slide">
+
+            <article class="row ">
+
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+
+          </div>
+          <div class="swiper-slide">
+
+            <article class="row ">
+
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+              <article class="col-sm-6 col-lg-4">
+                <article class="content">
+                  <h4>new adventure</h4>
+                  <span class="d-inline-block">17 March 2019</span>
+                  <p>
+                    Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </article>
+              </article>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="title mb-5">
+        <div class="theTitle text-center text-sm-start">
+
+          <span>contact us</span>
+          <h2 class="section-title">get in touch</h2>
+        </div>
+
+      </div>
+
+      <form action="" class="row g-3 needs-validation" novalidate>
+
+        <div class="col-sm-6">
+          <div>
+            <input type="email" placeholder="your email" required>
+            <p class="invalid-feedback">This field is required</p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <input type="text" placeholder="subject" required>
+            <p class="invalid-feedback">This field is required</p>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div>
+            <textarea placeholder="message here..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="theBtn">send message</button>
+      </form>
+
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container text-center">
+      <span class="d-inline-block text-uppercase">doob</span>
+      <h3 class="text-uppercase">creativity above</h3>
+      <div class="links ">
+        <a class="text-white" href="#intro">Home.</a>
+        <a class="text-white" href="#about">About us.</a>
+        <a class="text-white" href="#portfolio">Portfolio.</a>
+        <a class="text-white" href="#blog">Blog.</a>
+        <a class="text-white" href="#contact">Contact us.</a>
+      </div>
+      <p class="copyright text-white-50">&copy; 2023 - Doob,All Right Reserved</p>
+      <div class="social text-white">
+        <i class="fa-brands fa-facebook-f fa-3x"></i>
+        <i class="fa-brands fa-twitter fa-3x"></i>
+        <i class="fa-brands fa-dribbble fa-3x"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!---->
+
+
+
+
+
+
+
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

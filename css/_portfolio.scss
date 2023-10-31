@@ -1,0 +1,20 @@
+.portfolio {
+  padding: 10rem 0;
+  .title h2 {
+    @include title(4.5rem);
+  }
+  .swiper-slide {
+    figure {
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: $myTrans;
+
+        &:hover {
+          transform: scale(1.1) rotate(2deg);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

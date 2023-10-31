@@ -1,0 +1,25 @@
+.contact {
+  padding: 10rem 0;
+  form {
+    input,
+    textarea {
+      width: 100%;
+      background-color: $backShapeColor;
+      padding: 2rem;
+      border: none;
+      outline: none;
+      @include title(2rem);
+
+      &::placeholder {
+        @include title(2rem);
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    .theBtn {
+      margin: 2rem auto 0;
+      width: fit-content;
+    }
+  }
+}

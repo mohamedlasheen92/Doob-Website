@@ -1,0 +1,288 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  .menu {
+    cursor: pointer;
+    color: $main;
+    display: none;
+  }
+  .logo img {
+    width: 70px;
+  }
+    nav {
+      justify-content: space-between
+    }
+  nav ul li a {
+    @include title(2rem);
+    padding: 0 1.5rem;
+    position: relative;
+    transition: $myTrans;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $main;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transition: $myTrans;
+      transform: scale(0);
+    }
+    &:hover {
+      color: $main;
+      &::before {
+          transform: scale(100%);
+        }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  header .menu {
+    display: block;
+  }
+  nav {
+    padding-top: 15%;
+    position: fixed;
+    left: -30rem;
+    top: 0;
+    z-index: 999;
+    height: 100%;
+    background-color: $white;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    gap: 4rem;
+    transition: $myTrans;
+    &.active{
+      left: 0;
+    }
+
+    a {
+      display: block;
+      margin: 4rem 0;
+    }
+    .settings {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header nav ul li a {
+    font-size: 1.7rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 575.98px) {
+  header nav ul li a {
+    padding: 0 0.5rem;
+  }
+}
+
+
+
+.modal-body {
+  min-width: 90%;
+}
+.container form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+
+form .form-row .input-data {
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.input-data input {
+  margin: 5rem 0;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+  font-weight: 500;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-35px);
+  font-size: 1.7rem;
+  color: $main;
+}
+
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.textarea label {
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: $main;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before {
+  transform: scale(1);
+}
+.input-data .underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(153, 153, 153, 0.5);
+}
+
+.submit-btn .input-data {
+  overflow: hidden;
+  height: 45px !important;
+  width: 25% !important;
+  .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(
+      right,
+      #56d8e4,
+      #9f01ea,
+      #56d8e4,
+      #9f01ea
+    );
+    transition: all 0.4s;
+  }
+  &:hover .inner {
+    left: 0;
+  }
+  input {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .container .text {
+    font-size: 30px;
+  }
+
+  .container form {
+    padding: 10px 0 0 0;
+  }
+
+  .container form .form-row {
+    display: block;
+  }
+
+  form .form-row .input-data {
+    margin: 35px 0 !important;
+  }
+
+  .submit-btn .input-data {
+    width: 40% !important;
+  }
+}
+.lang {
+  position: relative;
+  font-size: 2rem;
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: $myTrans;
+    color: $secondary;
+  }
+  .langBtn {
+    width: 10rem;
+  }
+  .sec-menu {
+    padding: 0;
+    // padding-right: 2rem;
+    min-width: 10rem;
+    box-shadow: 4px 4px 15px 1px #e1e1e1;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: $myTrans;
+    button:hover,
+    button.active {
+      background-color: $secondary;
+      color: $white;
+    }
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Intro
+.intro {
+  background-image: url(../images/intro-shape.png);
+  background-repeat: no-repeat;
+  background-position: right -250px;
+  padding-bottom: 10rem;
+  img {
+    max-width: 500px;
+  }
+  .content {
+    h1 {
+      @include title(6rem);
+    }
+    p {
+      color: $light;
+      @include graph(1.7rem);
+      margin: 2rem 0;
+    }
+    .touch {
+      all: unset;
+      font-size: 2rem;
+      color: $secondary;
+      margin-left: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .intro .content p {
+    max-width: 75%;
+  }
+}
