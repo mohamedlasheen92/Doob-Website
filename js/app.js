@@ -24,8 +24,10 @@ intro.style.paddingTop = `${header.clientHeight + 50}px`;
 window.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
     header.style.backgroundColor = "#fff";
+    header.style.padding = "15px 0";
   } else {
     header.style.backgroundColor = "transparent";
+    header.style.padding = "35px 0";
   }
 })
 
@@ -61,6 +63,15 @@ let blogSwiper = new Swiper('.blogSwiper', {
   navigation: {
     nextEl: '.blog .button-next',
     prevEl: '.blog .button-prev',
+  },
+})
+
+// Intro Swiper
+let introSwiper = new Swiper(".introSwiper", {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
 })
 

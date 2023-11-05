@@ -2,7 +2,9 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  transition: $myTrans;
   z-index: 999;
+  padding: 35px 0;
   .menu {
     cursor: pointer;
     color: $main;
@@ -11,16 +13,16 @@ header {
   .logo img {
     width: 70px;
   }
-    nav {
-      justify-content: space-between
-    }
+  nav {
+    justify-content: space-between;
+  }
   nav ul li a {
     @include title(2rem);
     padding: 0 1.5rem;
     position: relative;
     transition: $myTrans;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       background-color: $main;
       width: 100%;
@@ -33,8 +35,8 @@ header {
     &:hover {
       color: $main;
       &::before {
-          transform: scale(100%);
-        }
+        transform: scale(100%);
+      }
     }
   }
 }
@@ -56,7 +58,7 @@ header {
     justify-content: flex-start !important;
     gap: 4rem;
     transition: $myTrans;
-    &.active{
+    &.active {
       left: 0;
     }
 
@@ -82,8 +84,6 @@ header {
     padding: 0 0.5rem;
   }
 }
-
-
 
 .modal-body {
   min-width: 90%;
@@ -259,11 +259,12 @@ form .form-row .input-data {
   background-repeat: no-repeat;
   background-position: right -250px;
   padding-bottom: 10rem;
+
   img {
     max-width: 500px;
   }
   .content {
-    h1 {
+    h2 {
       @include title(6rem);
     }
     p {
@@ -280,6 +281,53 @@ form .form-row .input-data {
       cursor: pointer;
     }
   }
+
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-pagination {
+    position: relative;
+    bottom: -3rem;
+  }
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $main;
+  }
+
+  span.swiper-pagination-bullet {
+    background-color: $secondary;
+    width: 2rem;
+    border-radius: 0;
+    height: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .swiper-slide .content h2,
+  .swiper-slide .content p,
+  .swiper-slide .content button,
+    .swiper-slide img {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 0.3s ease-out;
+  }
+  .swiper-slide-active .content h2,
+  .swiper-slide-active .content p,
+  .swiper-slide-active .content button,
+    .swiper-slide-active img {
+    opacity: 1;
+    transform: none;
+  }
+    .swiper-slide-active .content h2 {
+      transition-delay: 0.5s;
+    }
+    .swiper-slide-active .content p {
+      transition-delay: 1s;
+    }
+    .swiper-slide-active .content button {
+      transition-delay: 1.5s;
+    }
+    .swiper-slide-active img {
+      transition-delay: 2s;
+    }
 }
 @media (min-width: 992px) {
   .intro .content p {

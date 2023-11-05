@@ -159,7 +159,9 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  transition: all 0.3s linear;
   z-index: 999;
+  padding: 35px 0;
 }
 header .menu {
   cursor: pointer;
@@ -410,7 +412,7 @@ form .form-row .input-data {
 .intro img {
   max-width: 500px;
 }
-.intro .content h1 {
+.intro .content h2 {
   font-size: 6rem;
   color: #314584;
   text-transform: capitalize;
@@ -430,6 +432,50 @@ form .form-row .input-data {
   margin-left: 2rem;
   font-weight: 600;
   cursor: pointer;
+}
+.intro .swiper {
+  overflow: visible;
+}
+.intro .swiper-pagination {
+  position: relative;
+  bottom: -3rem;
+}
+.intro span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #ff3946;
+}
+.intro span.swiper-pagination-bullet {
+  background-color: #314584;
+  width: 2rem;
+  border-radius: 0;
+  height: 0.5rem;
+  margin-top: 2rem;
+}
+.intro .swiper-slide .content h2,
+.intro .swiper-slide .content p,
+.intro .swiper-slide .content button,
+.intro .swiper-slide img {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: all 0.3s ease-out;
+}
+.intro .swiper-slide-active .content h2,
+.intro .swiper-slide-active .content p,
+.intro .swiper-slide-active .content button,
+.intro .swiper-slide-active img {
+  opacity: 1;
+  transform: none;
+}
+.intro .swiper-slide-active .content h2 {
+  transition-delay: 0.5s;
+}
+.intro .swiper-slide-active .content p {
+  transition-delay: 1s;
+}
+.intro .swiper-slide-active .content button {
+  transition-delay: 1.5s;
+}
+.intro .swiper-slide-active img {
+  transition-delay: 2s;
 }
 
 @media (min-width: 992px) {
