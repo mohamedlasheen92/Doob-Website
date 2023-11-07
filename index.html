@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,12 +9,19 @@
   <link rel="stylesheet" href="css/all.min.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/main.css" />
-  <!-- <link rel="icon" href="images/logo.png"> -->
+  <link rel="icon" href="images/icon.png">
 
   <title>Doob</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!-- Switch Themes -->
+  <button class="theme"></button>
+
+
+
+
   <!-- Header -->
   <header id="header" class="">
     <div class="container ">
@@ -22,10 +29,10 @@
         <div class="logo">
           <img src="images/logo.png" alt="" />
         </div>
-        <nav class="d-flex align-items-center ">
+        <nav class="d-flex align-items-center navbar">
           <ul>
             <li>
-              <a href="#intro">Home.</a>
+              <a href="#intro" class="active">Home.</a>
               <a href="#about">About us.</a>
               <a href="#portfolio">Portfolio.</a>
               <a href="#blog">Blog.</a>

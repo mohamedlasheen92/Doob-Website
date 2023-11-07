@@ -75,4 +75,18 @@ let introSwiper = new Swiper(".introSwiper", {
   },
 })
 
+// Switch Theme
+const themeBtn = document.querySelector(".theme");
+themeBtn.addEventListener("click", function () {
+  themeBtn.classList.toggle("active");
+
+  const htm = document.getElementsByTagName("html")[0];
+  if (htm.getAttribute('data-bs-theme') === 'light') {
+    htm.setAttribute('data-bs-theme', 'dark');
+  } else {
+    htm.setAttribute('data-bs-theme', 'light');
+  }
+
+})
+
 

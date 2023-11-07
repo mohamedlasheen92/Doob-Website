@@ -2,9 +2,8 @@ $main: #ff3946;
 $secondary: #314584;
 $white: #fff;
 $light: #777;
-$backShapeColor: #F4FAFE;
+$backShapeColor: #f4fafe;
 $myTrans: all 0.3s linear;
-
 
 * {
   margin: 0;
@@ -34,6 +33,7 @@ body {
   font-family: "Mohave", sans-serif;
   scroll-padding-top: 53px;
   overflow-x: hidden;
+  transition: $myTrans;
 }
 ul {
   list-style: none;
@@ -92,7 +92,8 @@ button {
     z-index: 1;
   }
   &:hover {
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 100%;
     }
   }
@@ -115,7 +116,6 @@ button {
     background-color: $secondary;
     color: $white;
   }
-
 }
 .theTitle {
   span {

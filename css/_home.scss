@@ -32,7 +32,7 @@ header {
       transition: $myTrans;
       transform: scale(0);
     }
-    &:hover {
+    &:hover, &.active {
       color: $main;
       &::before {
         transform: scale(100%);
@@ -126,7 +126,7 @@ form .form-row .input-data {
 .textarea label {
   width: 100%;
   bottom: 40px;
-  background: #fff;
+  background: $white;
 }
 
 .input-data .underline {
@@ -160,40 +160,6 @@ form .form-row .input-data {
   background-color: rgba(153, 153, 153, 0.5);
 }
 
-.submit-btn .input-data {
-  overflow: hidden;
-  height: 45px !important;
-  width: 25% !important;
-  .inner {
-    height: 100%;
-    width: 300%;
-    position: absolute;
-    left: -100%;
-    background: -webkit-linear-gradient(
-      right,
-      #56d8e4,
-      #9f01ea,
-      #56d8e4,
-      #9f01ea
-    );
-    transition: all 0.4s;
-  }
-  &:hover .inner {
-    left: 0;
-  }
-  input {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-  }
-}
 
 @media (max-width: 700px) {
   .container .text {
@@ -333,4 +299,38 @@ form .form-row .input-data {
   .intro .content p {
     max-width: 75%;
   }
+}
+
+
+// Theme
+.theme {
+  background-color: $light;
+  width: 55px;
+  height: 30px;
+  border-radius: 2rem;
+  position: fixed;
+  top: 30%;
+  left: 4px;
+  z-index: 1000;
+  border: none;
+  cursor: pointer;
+  transition: $myTrans;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: $secondary;
+    width: 25px;
+    height: 25px;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2rem;
+    transition: $myTrans;
+  }
+  &.active::before {
+    left: 25px;
+  }
+    &.active {
+      background-color: $main;
+    }
 }
